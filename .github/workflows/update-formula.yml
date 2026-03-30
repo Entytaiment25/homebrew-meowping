@@ -1,6 +1,8 @@
 name: Update Formula
 
 on:
+  schedule:
+    - cron: "0 * * * *"
   repository_dispatch:
     types: [release]
   workflow_dispatch:
@@ -18,7 +20,8 @@ jobs:
       - name: Fetch latest release info
         id: release
         run: |
-          RELEASE=$(curl -sSfL https://api.github.com/repos/Entytaiment25/meowping/releases/latest)
+          RELEASE=$(curl -sSfL -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/repos/Entytaiment25/meowping/releases/latest)
           VERSION=$(echo "$RELEASE" | jq -r '.tag_name')
           if [ -z "$VERSION" ] || [ "$VERSION" = "null" ]; then
             echo "Failed to fetch latest release version" >&2
@@ -50,6 +53,7 @@ jobs:
 
       - name: Update formula
         run: |
+          set -e
           VERSION="${{ steps.release.outputs.version }}"
           AARCH64_URL="${{ steps.checksums.outputs.aarch64_url }}"
           X86_64_URL="${{ steps.checksums.outputs.x86_64_url }}"
