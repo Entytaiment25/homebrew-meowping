@@ -1,5 +1,5 @@
 class Meowping < Formula
-  desc "A flexible ping utility tool written in Rust, focused on being size efficient and fast"
+  desc "Ping utility written in Rust, focused on being size efficient and fast"
   homepage "https://github.com/Entytaiment25/meowping"
   version "2.0.8"
   license "MIT"
@@ -20,6 +20,6 @@ class Meowping < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/meowping --version 2>&1", 1)
+    assert_match version.to_s, shell_output("#{bin}/meowping --help")
   end
 end
