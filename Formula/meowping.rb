@@ -7,11 +7,11 @@ class Meowping < Formula
   on_macos do
     on_arm do
       url "https://github.com/Entytaiment25/meowping/releases/download/2.0.14/meowping-2.0.14-aarch64-apple-darwin.tar.gz"
-      sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      sha256 "c2a027f0c44397f1870ce5fde0e5de602cbaadfd16f06fe7f16a3ca9457a9402"
     end
     on_intel do
       url "https://github.com/Entytaiment25/meowping/releases/download/2.0.14/meowping-2.0.14-x86_64-apple-darwin.tar.gz"
-      sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      sha256 "68c839048679220da866c4277b0ab27193b06dbef4a5d93b9f3c699133955515"
     end
   end
 
