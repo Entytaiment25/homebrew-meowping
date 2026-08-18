@@ -1,17 +1,17 @@
 class Meowping < Formula
   desc "Ping utility written in Rust, focused on being size efficient and fast"
   homepage "https://github.com/Entytaiment25/meowping"
-  version "2.0.16"
+  version "2.0.17"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/Entytaiment25/meowping/releases/download/2.0.16/meowping-2.0.16-aarch64-apple-darwin.tar.gz"
-      sha256 "6da9f75e32523db2ae2352b56f2f8d87b75de52b159b797f75decbf6a79f803a"
+      url "https://github.com/Entytaiment25/meowping/releases/download/2.0.17/meowping-2.0.17-aarch64-apple-darwin.tar.gz"
+      sha256 "e292599ea1d9b6c290303726605ef6d761dc22b8074a7931c075cd876fdb03db"
     end
     on_intel do
-      url "https://github.com/Entytaiment25/meowping/releases/download/2.0.16/meowping-2.0.16-x86_64-apple-darwin.tar.gz"
-      sha256 "ea72efe25604bfdef080b16b085d20204d310cf5eb4423ea627e8f1c1c6d2bd0"
+      url "https://github.com/Entytaiment25/meowping/releases/download/2.0.17/meowping-2.0.17-x86_64-apple-darwin.tar.gz"
+      sha256 "f404ca948ee2efba3cdb93b2cc8e7e0ad6249705a4a9364aca2abbffa212b3ef"
     end
   end
 
